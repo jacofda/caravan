@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme{
+    
+    --color-primary: #2c5da2; /* Blue */
+    --color-secondary: #82c854; /* Green */
+    --color-tertiary: #a86ca0; /* Purple */
+    /* add text-xs */
+    --font-size-xs: 0.75rem; /* 12px */
+
+}
+.html h3 {
+    @apply text-xl font-semibold text-gray-800 mb-2 mt-4;
+
+}
