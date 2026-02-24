@@ -2,10 +2,45 @@
   import type { PageData } from './$types';
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
   import { richTextResolver } from '@storyblok/richtext';
+  import duemme_46 from '$lib/assets/caravan/duemme-46.jpg';
+  import family_40 from '$lib/assets/caravan/family-40.jpg';
+  import lusy_46 from '$lib/assets/caravan/lusy-46.jpg';
+  import nomad_46 from '$lib/assets/caravan/nomad-46.jpg';
+  import norma_60 from '$lib/assets/caravan/norma-60.jpg';
+  import regina_60 from '$lib/assets/caravan/regina-60.jpg';
+  import singol_40 from '$lib/assets/caravan/singol-40.jpg';
+  import ContactCTA from '$lib/components/elements/ContactCTA.svelte';
 
   export let data: PageData;
 
   const resolver = richTextResolver();
+
+  function getCaravanImage(slug: string, name: string) {
+    const images = {
+      duemme_46,
+      family_40,
+      lusy_46,
+      nomad_46,
+      norma_60,
+      regina_60,
+      singol_40,
+    };
+    const slugToKey: Record<string, keyof typeof images> = {
+      'duemme-46': 'duemme_46',
+      'family-40': 'family_40',
+      'lusy-46': 'lusy_46',
+      'nomad-46': 'nomad_46',
+      'norma-60': 'norma_60',
+      'regina-60': 'regina_60',
+      'singol-40': 'singol_40',
+    };
+    const key = slugToKey[slug];
+    const img = key ? images[key] : undefined;
+    if (img) {
+      return `<img src="${img}" alt="${name}" class="w-full object-cover mr-4" />`;
+    }
+    return '';
+  }
 </script>
 
 <svelte:head>
@@ -29,13 +64,9 @@
 <div class="container mx-auto px-4 py-16">
   <main class="grid grid-cols-1 gap-8 lg:grid-cols-2">
     <div class="space-y-6">
-      <!-- <div class="mx-auto max-w-md overflow-hidden rounded-lg bg-gray-50 shadow-lg">
-        <img
-          src={`/src/lib/assets/${data.caravan.content.pic}.png`}
-          alt={data.caravan.name}
-          class="mx-auto h-auto w-full object-cover"
-        />
-      </div> -->
+      <div class="mx-auto max-w-md overflow-hidden rounded-lg bg-gray-50 shadow-lg">
+        {@html getCaravanImage(data.caravan.slug, data.caravan.name)}
+      </div>
 
       <!-- Description -->
       {#if data.caravan.content.descrizione}
@@ -85,35 +116,14 @@
           <h2 class="text-2xl font-bold text-white drop-shadow-md">
             {data.caravan.name}
           </h2>
-          <div class="mt-2 flex items-center gap-2">
-            <!-- <span
-              class="rounded-full bg-white/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-sm"
-            >
-              {data.trailer.content.numero_assi}
-              {Number(data.trailer.content.numero_assi) === 1 ? 'Asse' : 'Assi'}
-            </span> -->
-            <!-- {#if Number(data.trailer.content.numero_assi) > 1}
-              <div class="flex w-full flex-1 flex-col gap-1">
-                <div
-                  class="h-1 w-full rounded-full bg-linear-to-r from-white/50 to-transparent"
-                ></div>
-                <div
-                  class="h-1 w-full rounded-full bg-linear-to-r from-white/50 to-transparent"
-                ></div>
-              </div>
-            {:else}
-              <div
-                class="h-1 flex-1 rounded-full bg-linear-to-r from-white/50 to-transparent"
-              ></div>
-            {/if} -->
-          </div>
+          <div class="mt-2 flex items-center gap-2"></div>
         </div>
       </div>
 
       <table class="w-full">
         <tbody class="divide-y divide-gray-200">
           {#each Object.entries(data.caravan.content) as [key, value]}
-            {#if !key.startsWith('_') && key !== 'component' && key !== 'name'}
+            {#if !key.startsWith('_') && key !== 'component' && key !== 'name' && key !== 'descrizione'}
               <tr class="transition-colors hover:bg-gray-50">
                 <td class="p-6 font-medium text-gray-700 capitalize">
                   {key.replace(/_/g, ' ')}
@@ -131,3 +141,4 @@
     <div class="col-span-full"></div>
   </main>
 </div>
+<ContactCTA />

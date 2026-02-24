@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import CamperHome from '$lib/components/elements/CamperHome.svelte';
   import ArticoliList from '../lib/components/ArticoliList.svelte';
   export let data;
 </script>
@@ -52,7 +52,7 @@
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <a
-          href="{base}/caravan"
+          href="/caravan"
           class="bg-secondary hover:bg-secondary/90 rounded-xl px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
         >
           Scopri i Caravan
@@ -66,6 +66,7 @@
       </div>
     </div>
   </div>
+  <CamperHome />
 </div>
 
 <!-- Features Section -->
@@ -172,7 +173,7 @@
 
       <!-- Card 3: Costruzione su Misura -->
       <a
-        href="{base}/contatti"
+        href="/contatti"
         class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
         <div class="flex flex-col items-start">
@@ -236,13 +237,13 @@
         </p>
         <div class="mt-8 flex gap-x-4">
           <a
-            href="{base}/contatti"
+            href="/contatti"
             class="bg-secondary hover:bg-secondary/90 rounded-xl px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Contattaci Ora
           </a>
           <a
-            href="{base}/caravan"
+            href="/caravan"
             class="rounded-xl bg-white px-6 py-3.5 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-gray-900/10 transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
           >
             Vedi i Modelli
