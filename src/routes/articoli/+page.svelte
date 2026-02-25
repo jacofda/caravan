@@ -10,11 +10,11 @@
   import { goto } from '$app/navigation';
 
   // Derive activeFilter directly from $page.url.searchParams for reactivity
-  $: activeFilter = $page.url.searchParams.get('activeFilter') || 'tutti';
+  $: activeFilter = $page.url.searchParams.get('activeFilter') || 'Tutti';
 
   function gotoFilter(filter: string) {
     const url = new URL(window.location.href);
-    if (filter === 'tutti') {
+    if (filter === 'Tutti') {
       url.searchParams.delete('activeFilter');
     } else {
       url.searchParams.set('activeFilter', filter);
@@ -22,14 +22,21 @@
     goto(url.pathname + url.search, { replaceState: false });
   }
 
-  // Get unique tags from all articles
-  $: uniqueTags = Array.from(
-    new Set(data.stories.map((story: any) => story.content.tag).filter(Boolean))
-  );
+  // Hardcoded filters with color classes
+  const filters = [
+    {
+      label: 'Tutti',
+      color: 'from-secondary via-secondary/70 to-secondary bg-linear-to-r text-white',
+    },
+    { label: 'Articolo', color: 'bg-secondary text-white' },
+    { label: 'Accessori', color: 'bg-tertiary text-white' },
+    { label: 'Mezzi Speciali', color: 'bg-primary text-white' },
+    { label: 'In Vendita', color: 'bg-quaternary text-white' },
+  ];
 
   // Filter stories based on selected filter, reactive to $page
   $: filteredStories = (() => {
-    if (activeFilter === 'tutti') {
+    if (activeFilter === 'Tutti') {
       return data.stories;
     }
     return data.stories.filter((s: any) => s.content.tag === activeFilter);
@@ -46,26 +53,18 @@
   <section class="pb-10">
     <!-- Filter buttons with gradient effects -->
     <div class="mb-12 flex flex-wrap justify-center gap-3">
-      <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-          activeFilter === 'tutti'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-            : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-        }`}
-        on:click={() => gotoFilter('tutti')}
-      >
-        Tutti
-      </button>
-      {#each uniqueTags as tag}
+      {#each filters as filter}
         <button
-          class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-            activeFilter === tag
-              ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-              : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-          }`}
-          on:click={() => gotoFilter(tag)}
+          class={`rounded-full px-8 py-3 font-semibold transition-all duration-300
+            ${
+              activeFilter === filter.label
+                ? filter.color + ' scale-105 shadow-xl'
+                : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
+            }
+          `}
+          on:click={() => gotoFilter(filter.label)}
         >
-          {tag}
+          {filter.label}
         </button>
       {/each}
     </div>
@@ -73,7 +72,11 @@
     <!-- Articles Grid -->
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {#each filteredStories as story}
-        <ArticoloCard {story} />
+        <ArticoloCard
+          {story}
+          tagColor={filters.find((f) => f.label === (story.content.tag || 'Tutti'))?.color ||
+            'bg-primary text-white'}
+        />
       {/each}
     </div>
 

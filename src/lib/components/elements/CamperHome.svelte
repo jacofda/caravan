@@ -19,7 +19,7 @@
       <div class="flex flex-1 flex-col justify-center gap-6">
         <!-- REVISIONI -->
         <a
-          href="/caravan"
+          href="/articoli?activeFilter=Articolo"
           class="group hover:ring-secondary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
@@ -120,7 +120,7 @@
       <div class="flex flex-1 flex-col justify-center gap-6">
         <!-- MOTORHOME -->
         <a
-          href="/articoli"
+          href="/caravan"
           class="group hover:ring-secondary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">

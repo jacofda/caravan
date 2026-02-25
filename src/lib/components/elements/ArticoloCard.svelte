@@ -1,6 +1,7 @@
 <script lang="ts">
   export let story: any;
   export let showtag: boolean = true;
+  export let tagColor: string = 'bg-primary text-white';
 </script>
 
 <a
@@ -18,7 +19,7 @@
     {/if}
     {#if showtag && story.content.tag}
       <div
-        class="from-secondary via-secondary/90 to-secondary absolute top-4 right-4 rounded-full bg-linear-to-r px-4 py-2 text-sm font-semibold text-white shadow-lg"
+        class={`absolute top-4 right-4 rounded-full px-4 py-2 text-sm font-semibold shadow-lg ${tagColor}`}
       >
         {story.content.tag}
       </div>
