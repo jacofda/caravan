@@ -5,14 +5,29 @@
 
   export let data: PageData;
 
-  let activeFilter: string = 'tutti';
+  import { page } from '$app/stores';
+  import { get } from 'svelte/store';
+  import { goto } from '$app/navigation';
+
+  // Derive activeFilter directly from $page.url.searchParams for reactivity
+  $: activeFilter = $page.url.searchParams.get('activeFilter') || 'tutti';
+
+  function gotoFilter(filter: string) {
+    const url = new URL(window.location.href);
+    if (filter === 'tutti') {
+      url.searchParams.delete('activeFilter');
+    } else {
+      url.searchParams.set('activeFilter', filter);
+    }
+    goto(url.pathname + url.search, { replaceState: false });
+  }
 
   // Get unique tags from all articles
   $: uniqueTags = Array.from(
     new Set(data.stories.map((story: any) => story.content.tag).filter(Boolean))
   );
 
-  // Filter stories based on selected filter
+  // Filter stories based on selected filter, reactive to $page
   $: filteredStories = (() => {
     if (activeFilter === 'tutti') {
       return data.stories;
@@ -37,7 +52,7 @@
             ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
             : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
         }`}
-        on:click={() => (activeFilter = 'tutti')}
+        on:click={() => gotoFilter('tutti')}
       >
         Tutti
       </button>
@@ -48,7 +63,7 @@
               ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
               : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
           }`}
-          on:click={() => (activeFilter = tag)}
+          on:click={() => gotoFilter(tag)}
         >
           {tag}
         </button>

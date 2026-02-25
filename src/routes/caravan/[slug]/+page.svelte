@@ -76,44 +76,17 @@
           </div>
         </div>
       {/if}
-
-      <!-- Ruote and Numero Assi -->
-      <!-- <div class="flex justify-center gap-4 text-lg">
-        <div class="border-secondary h-28 min-w-38 rounded-lg border-2 bg-white text-center">
-          <div class="flex h-[50%] items-center justify-center font-semibold text-gray-900">
-            {data.trailer.content.ruote}
-          </div>
-          <div
-            class="from-secondary via-secondary/50 to-secondary mb-2 flex h-[50%] items-center justify-center bg-linear-to-br text-white"
-          >
-            Ruote
-          </div>
-        </div>
-        <div class="border-primary h-28 min-w-38 rounded-lg border-2 bg-white text-center">
-          <div class="flex h-[50%] items-center justify-center text-lg font-semibold text-gray-900">
-            {data.trailer.content.numero_assi}
-          </div>
-
-          <div
-            class="from-primary via-primary/50 to-primary mb-2 flex h-[50%] items-center justify-center bg-linear-to-br text-black"
-          >
-            Numero Assi
-          </div>
-        </div>
-      </div> -->
     </div>
 
     <!-- Right Section - Table -->
     <div class="overflow-hidden rounded-lg bg-white shadow-lg">
       <!-- Gradient Title Header -->
-      <div
-        class="from-secondary via-secondary/50 to-secondary relative overflow-hidden bg-linear-to-r p-6"
-      >
+      <div class="bg-secondary relative overflow-hidden p-6">
         <div
           class="absolute inset-0 bg-linear-to-br from-transparent via-white/10 to-transparent"
         ></div>
         <div class="relative">
-          <h2 class="text-2xl font-bold text-white drop-shadow-md">
+          <h2 class="text-2xl font-bold text-black">
             {data.caravan.name}
           </h2>
           <div class="mt-2 flex items-center gap-2"></div>

@@ -4,7 +4,7 @@ export interface ArticoloContent {
   tag: string;
   _uid: string;
   titolo: string;
-  abstract: string;
+  sottotitolo: string;
   galleria: Immagine[];
   immagine: Immagine;
   component: string;
@@ -40,7 +40,7 @@ export const load: PageLoad = async ({ parent }) => {
     per_page: 40,
     filter_query: {
       component: {
-        in: 'articolo',
+        in: 'Articolo',
       },
     },
   });

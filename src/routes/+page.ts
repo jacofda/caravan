@@ -19,7 +19,7 @@ export const load: PageLoad = async () => {
     per_page: 3,
     filter_query: {
       component: {
-        in: 'articolo',
+        in: 'Articolo',
       },
     },
     sort_by: 'published_at:desc',

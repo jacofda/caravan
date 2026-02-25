@@ -30,9 +30,9 @@
     <h3 class="group-hover:text-secondary mb-2 text-xl font-bold text-gray-900 transition-colors">
       {story.content.titolo}
     </h3>
-    {#if story.content.abstract}
+    {#if story.content.sottotitolo}
       <p class="line-clamp-1 text-gray-600">
-        {story.content.abstract}
+        {story.content.sottotitolo}
       </p>
     {/if}
   </div>

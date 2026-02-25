@@ -5,8 +5,10 @@
 <section class="mb-20">
   <div class="mx-auto max-w-7xl px-4 lg:px-8">
     <div class="mb-10 text-center">
-      <h3 class="mb-4 text-3xl font-bold text-gray-800">COSA OFFRIAMO</h3>
-      <p class="text-lg text-gray-600">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        I Nostri <span class="text-secondary">Servizi</span>
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
         OMG, ditta creatrice del marchio VS, negli anni ha espanso la sua gamma d'intervento ed ora
         compie ristrutturazioni, riparazioni, migliorie e <b>costruzioni su misura</b> in un'ampia gamma
         di categorie, fra trasporti ausiliari e motorizzati.
@@ -40,8 +42,7 @@
 
             <div>
               <p class="text-gray-600">
-                Revisioni e sistemazioni di qualsiasi problematica, sia meccanica che strutturale,
-                su qualsiasi tipo di veicolo.
+                Revisioni e sistemazioni di qualsiasi problematica, sia meccanica che strutturale.
               </p>
             </div>
           </div></a
@@ -146,7 +147,7 @@
         </a>
         <!-- MEZZI SPECIALI -->
         <a
-          href="/articoli"
+          href="/articoli?activeFilter=Mezzi+Speciali"
           class="group hover:ring-primary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
@@ -176,7 +177,7 @@
         </a>
         <!-- ACCESSORI -->
         <a
-          href="/articoli"
+          href="/articoli?activeFilter=Accessori"
           class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
