@@ -23,3 +23,7 @@
 .html hr{
     @apply  my-4;
 }
+
+.html p{
+    @apply mb-2;
+}

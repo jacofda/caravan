@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { sbImg } from '$lib/storyblok';
+
   export let images: Array<{ filename: string; alt?: string }> = [];
   let lightboxOpen = false;
   let currentIndex = 0;
@@ -33,7 +35,7 @@
           on:click={() => openLightbox(idx)}
           aria-label="Apri immagine in lightbox"
         >
-          <img src={img.filename} alt={img.alt} class="h-64 w-full object-cover" />
+          <img src={sbImg(img.filename, 600, 400)} alt={img.alt} class="h-64 w-full object-cover" />
         </button>
       {/each}
     </div>
@@ -51,7 +53,7 @@
       >&#8592;</button
     >
     <img
-      src={images[currentIndex].filename}
+      src={sbImg(images[currentIndex].filename, 1400, 0)}
       alt={images[currentIndex].alt}
       class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-2xl"
     />

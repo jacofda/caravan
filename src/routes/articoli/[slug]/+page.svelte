@@ -3,6 +3,7 @@
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
   import { richTextResolver } from '@storyblok/richtext';
   import Gallery from '$lib/components/Gallery.svelte';
+  import { sbImg } from '$lib/storyblok';
 
   export let data: PageData;
 
@@ -27,10 +28,16 @@
 
 <div class="container mx-auto px-4 py-16">
   <main class="mx-auto max-w-4xl">
+    {#if data.articolo.content.sottotitolo}
+      <h2 class="mb-8 text-center text-2xl font-semibold text-gray-600">
+        {data.articolo.content.sottotitolo}
+      </h2>
+    {/if}
+
     {#if data.articolo.content.immagine?.filename}
       <div class="mx-auto mb-8 max-w-2xl overflow-hidden rounded-lg shadow-2xl">
         <img
-          src={data.articolo.content.immagine.filename}
+          src={sbImg(data.articolo.content.immagine.filename, 800, 400)}
           alt={data.articolo.content.immagine.alt || data.articolo.content.titolo}
           class="aspect-2/1 h-auto w-full object-cover"
         />

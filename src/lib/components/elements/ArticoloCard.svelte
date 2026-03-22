@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { sbImg } from '$lib/storyblok';
+
   export let story: any;
   export let showtag: boolean = true;
   export let tagColor: string = 'bg-primary text-white';
@@ -12,7 +14,7 @@
   <div class="group relative h-72 bg-gray-200 md:h-60">
     {#if story.content.immagine?.filename}
       <img
-        src={story.content.immagine.filename}
+        src={sbImg(story.content.immagine.filename, 600, 300)}
         alt={story.content.immagine.alt || story.content.titolo}
         class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
       />
