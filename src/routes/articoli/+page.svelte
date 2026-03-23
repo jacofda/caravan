@@ -55,7 +55,7 @@
     <div class="mb-12 flex flex-wrap justify-center gap-3">
       {#each filters as filter}
         <button
-          class={`rounded-full px-8 py-3 font-semibold transition-all duration-300
+          class={`rounded-xl px-8 py-3 font-semibold transition-all duration-300
             ${
               activeFilter === filter.label
                 ? filter.color + ' scale-105 shadow-xl'

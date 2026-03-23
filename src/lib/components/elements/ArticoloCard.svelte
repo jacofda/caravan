@@ -21,7 +21,7 @@
     {/if}
     {#if showtag && story.content.tag}
       <div
-        class={`absolute top-4 right-4 rounded-full px-4 py-2 text-sm font-semibold shadow-lg ${tagColor}`}
+        class={`absolute top-4 right-4 rounded-xl px-4 py-2 text-sm font-semibold shadow-lg ${tagColor}`}
       >
         {story.content.tag}
       </div>
@@ -36,6 +36,15 @@
     {#if story.content.sottotitolo}
       <p class="line-clamp-1 text-gray-600">
         {story.content.sottotitolo}
+      </p>
+    {/if}
+    {#if story.published_at}
+      <p class="mt-3 text-xs text-gray-400">
+        {new Date(story.published_at).toLocaleDateString('it-IT', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric',
+        })}
       </p>
     {/if}
   </div>

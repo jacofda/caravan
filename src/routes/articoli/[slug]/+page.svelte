@@ -133,7 +133,7 @@
       <div class="mt-12 mb-12 flex lg:mb-0">
         <a
           href="/articoli"
-          class="from-secondary via-secondary/50 to-secondary rounded-full bg-linear-to-r px-8 py-3 font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          class="bg-secondary rounded-xl px-8 py-3 font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105"
         >
           ← Torna agli Articoli
         </a>
