@@ -182,7 +182,7 @@
       <!-- Old image -->
       <div class="mx-auto mt-16 max-w-5xl">
         <img
-          class="aspect-video w-full rounded-2xl object-cover shadow-xl"
+          class="aspect-video w-full rounded-xl object-cover shadow-xl"
           alt="Storia OMG"
           width="1140"
           height="475"
@@ -223,7 +223,7 @@
               <div class="mt-4 flex flex-col gap-8 md:flex-row">
                 <div class="shrink-0">
                   <img
-                    class="h-48 w-36 rounded-lg object-cover shadow-md"
+                    class="h-48 w-36 rounded-xl object-cover shadow-md"
                     width="275"
                     height="369"
                     alt="Depliant storico"
@@ -276,7 +276,7 @@
                   <img
                     width="318"
                     height="224"
-                    class="h-48 w-64 rounded-lg object-cover shadow-md"
+                    class="h-48 w-64 rounded-xl object-cover shadow-md"
                     alt="Primo caravan OMG"
                     src={prima}
                   />

@@ -20,12 +20,12 @@
         <!-- REVISIONI -->
         <a
           href="/articoli?activeFilter=Articolo"
-          class="group hover:ring-secondary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-secondary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
                   <path
@@ -50,12 +50,12 @@
         <!-- CARAVAN -->
         <a
           href="/caravan"
-          class="group hover:ring-primary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-primary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-primary/10 text-primary group-hover:bg-primary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-primary/10 text-primary group-hover:bg-primary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
                   <path
@@ -79,12 +79,12 @@
         <!-- CAMPER -->
         <a
           href="/caravan"
-          class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-tertiary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
                   <path
@@ -121,12 +121,12 @@
         <!-- MOTORHOME -->
         <a
           href="/caravan"
-          class="group hover:ring-secondary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-secondary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
                   <path
@@ -148,12 +148,12 @@
         <!-- MEZZI SPECIALI -->
         <a
           href="/articoli?activeFilter=Mezzi+Speciali"
-          class="group hover:ring-primary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-primary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-primary/10 text-primary group-hover:bg-primary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-primary/10 text-primary group-hover:bg-primary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
                   <path
@@ -178,12 +178,12 @@
         <!-- ACCESSORI -->
         <a
           href="/articoli?activeFilter=Accessori"
-          class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          class="group hover:ring-tertiary/50 relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         >
           <div class="flex flex-col items-start">
             <div class="mb-4 flex items-center gap-4">
               <div
-                class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 flex size-12 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+                class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 flex size-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8"
                   ><path

@@ -100,7 +100,7 @@
       {/if}
 
       {#if data.articolo.content.immagine?.filename}
-        <div class="mb-8 overflow-hidden rounded-lg shadow-2xl">
+        <div class="mb-8 overflow-hidden rounded-xl shadow-2xl">
           <img
             src={sbImg(data.articolo.content.immagine.filename, 900, 450)}
             alt={data.articolo.content.immagine.alt || data.articolo.content.titolo}
@@ -110,7 +110,7 @@
       {/if}
 
       {#if data.articolo.content.descrizione}
-        <div class="mb-8 rounded-lg lg:bg-white lg:p-8 lg:shadow-lg">
+        <div class="mb-8 rounded-xl lg:bg-white lg:p-8 lg:shadow-lg">
           <div
             class="prose prose-gray html max-w-none overflow-x-auto text-base leading-relaxed text-gray-700 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_table]:w-full"
           >
@@ -130,7 +130,7 @@
         </div>
       {/if}
 
-      <div class="mt-12 flex">
+      <div class="mt-12 mb-12 flex lg:mb-0">
         <a
           href="/articoli"
           class="from-secondary via-secondary/50 to-secondary rounded-full bg-linear-to-r px-8 py-3 font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -143,7 +143,7 @@
     <aside
       class="col-span-12 flex flex-col gap-6 lg:sticky lg:top-12 lg:col-span-3 lg:self-start lg:pt-16"
     >
-      <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+      <div class="overflow-hidden rounded-xl bg-white shadow-lg">
         <div class="bg-secondary px-5 py-3">
           <h3 class="text-lg font-bold text-white">Ultimi Articoli</h3>
         </div>
@@ -178,7 +178,7 @@
         </div>
       </div>
 
-      <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+      <div class="overflow-hidden rounded-xl bg-white shadow-lg">
         <div class="bg-secondary px-5 py-3">
           <h3 class="text-lg font-bold text-white">Categorie</h3>
         </div>

@@ -24,7 +24,7 @@
     <a
       href="tel:+390461765169"
       title="Chiama"
-      class="border-secondary text-secondary hover:bg-secondary flex cursor-pointer items-center gap-2 rounded-full border-2 bg-white px-5 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:text-white hover:shadow-xl active:scale-95"
+      class="border-secondary text-secondary hover:bg-secondary flex cursor-pointer items-center gap-2 rounded-xl border-2 bg-white px-5 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:text-white hover:shadow-xl active:scale-95"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-6 fill-current">
         <path
@@ -37,7 +37,7 @@
     <a
       href="mailto:giacomella.rimorchi@gmail.com"
       title="Scrivi"
-      class="border-secondary text-secondary hover:bg-secondary flex cursor-pointer items-center gap-2 rounded-full border-2 bg-white px-5 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:text-white hover:shadow-xl active:scale-95"
+      class="border-secondary text-secondary hover:bg-secondary flex cursor-pointer items-center gap-2 rounded-xl border-2 bg-white px-5 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:text-white hover:shadow-xl active:scale-95"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-6 fill-current">
         <path

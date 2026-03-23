@@ -72,7 +72,7 @@
           href="https://www.vsomg.it/"
           target="_blank"
           title="rimorchi OMG"
-          class="rounded-lg bg-white/20 p-2 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
+          class="rounded-xl bg-white/20 p-2 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
         >
           <img src={menuRimorchi} alt="rimorchi OMG" class="h-4" />
         </a>
@@ -81,7 +81,7 @@
       <!-- Mobile Hamburger Button -->
       <button
         onclick={toggleMenu}
-        class="flex h-10 w-10 flex-col items-center justify-center space-y-1.5 rounded-lg bg-white/20 backdrop-blur-sm transition-all hover:bg-white/30 lg:hidden"
+        class="flex h-10 w-10 flex-col items-center justify-center space-y-1.5 rounded-xl bg-white/20 backdrop-blur-sm transition-all hover:bg-white/30 lg:hidden"
         aria-label="Toggle menu"
       >
         <span
@@ -103,7 +103,7 @@
             <a
               href={link.href}
               onclick={closeMenu}
-              class="rounded-lg px-4 py-3 font-semibold transition-all hover:bg-white/20"
+              class="rounded-xl px-4 py-3 font-semibold transition-all hover:bg-white/20"
             >
               {link.name}
             </a>
@@ -114,7 +114,7 @@
             target="_blank"
             onclick={closeMenu}
             title="caravan OMG"
-            class="flex items-center gap-3 rounded-lg bg-white/20 px-4 py-3 backdrop-blur-sm transition-all hover:bg-white/30"
+            class="flex items-center gap-3 rounded-xl bg-white/20 px-4 py-3 backdrop-blur-sm transition-all hover:bg-white/30"
           >
             <img src={logoRimorchi} alt="rimorchi OMG" class="h-8" />
             <span class="font-semibold text-white">Sezione Rimorchi</span>
@@ -212,7 +212,7 @@
           <a
             href="https://rimorchi.vsomg.it/"
             target="_BLANK"
-            class="inline-block overflow-hidden rounded-lg bg-white/20 p-3 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
+            class="inline-block overflow-hidden rounded-xl bg-white/20 p-3 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
           >
             <img src={logoRimorchi} alt="OMG Rimorchi" class="h-12" />
           </a>

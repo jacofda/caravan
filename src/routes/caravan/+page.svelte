@@ -88,7 +88,7 @@
           <div class="flex items-center justify-center bg-gray-50 p-6 md:w-1/3">
             <a
               href={`/caravan/${story.slug}`}
-              class="focus:ring-primary/60 block rounded-lg focus:ring-2 focus:outline-none"
+              class="focus:ring-primary/60 block rounded-xl focus:ring-2 focus:outline-none"
             >
               {@html getCaravanImage(story.slug, story.name)}
             </a>

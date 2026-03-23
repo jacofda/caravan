@@ -8,7 +8,7 @@
 
 <a
   href="/articoli/{story.slug}"
-  class="group overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+  class="group overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
 >
   <!-- Image -->
   <div class="group relative h-72 bg-gray-200 md:h-60">

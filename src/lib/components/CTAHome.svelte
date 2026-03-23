@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:gap-8">
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-primary text-4xl font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
           <div class="mt-2 text-sm font-semibold text-gray-900">Caravan nuovi</div>
           <div class="mt-1 text-xs text-gray-600">Costruzione su misura</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-secondary text-4xl font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@
           <div class="mt-2 text-sm font-semibold text-gray-900">Soluzioni ad hoc</div>
           <div class="mt-1 text-xs text-gray-600">Personalizzazione e innovazione</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-tertiary text-4xl font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
           <div class="mt-2 text-sm font-semibold text-gray-900">Revisione e riparazione</div>
           <div class="mt-1 text-xs text-gray-600">Assistenza su camper e caravan</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-4xl font-bold text-gray-900">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -31,7 +31,7 @@
       {#each images as img, idx}
         <button
           type="button"
-          class="cursor-pointer overflow-hidden rounded-lg border-0 bg-transparent p-0 shadow-lg transition-transform hover:scale-105"
+          class="cursor-pointer overflow-hidden rounded-xl border-0 bg-transparent p-0 shadow-lg transition-transform hover:scale-105"
           on:click={() => openLightbox(idx)}
           aria-label="Apri immagine in lightbox"
         >
@@ -55,7 +55,7 @@
     <img
       src={sbImg(images[currentIndex].filename, 1400, 0)}
       alt={images[currentIndex].alt}
-      class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-2xl"
+      class="max-h-[80vh] max-w-[90vw] rounded-xl shadow-2xl"
     />
     <button class="absolute right-4 text-3xl text-white" on:click={next} aria-label="Successivo"
       >&#8594;</button
