@@ -100,7 +100,7 @@
       {/if}
 
       {#if data.articolo.content.immagine?.filename}
-        <div class="mb-8 overflow-hidden rounded-xl shadow-2xl">
+        <div class="mb-8 overflow-hidden rounded-xl">
           <img
             src={sbImg(data.articolo.content.immagine.filename, 900, 450)}
             alt={data.articolo.content.immagine.alt || data.articolo.content.titolo}
@@ -110,7 +110,7 @@
       {/if}
 
       {#if data.articolo.content.descrizione}
-        <div class="mb-8 rounded-xl lg:bg-white lg:p-8 lg:shadow-lg">
+        <div class=" mb-8 rounded-xl px-2 lg:py-8">
           <div
             class="prose prose-gray html max-w-none overflow-x-auto text-base leading-relaxed text-gray-700 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_table]:w-full"
           >

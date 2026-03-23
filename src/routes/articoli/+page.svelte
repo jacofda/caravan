@@ -6,7 +6,6 @@
   export let data: PageData;
 
   import { page } from '$app/stores';
-  import { get } from 'svelte/store';
   import { goto } from '$app/navigation';
 
   // Derive activeFilter directly from $page.url.searchParams for reactivity
