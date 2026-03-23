@@ -147,8 +147,8 @@
           <img src={logoCircle} alt="Officine Meccaniche Giacomella" class="h-16 w-auto" />
         </div>
         <p class="leading-relaxed text-black/90">
-          La ditta O.M.G. lavora in Valsugana, costruendo Rimorchi O.M.G. per il trasporto di cose e
-          mezzi speciali fatti su richiesta del cliente.
+          La ditta O.M.G. Valsugana: caravan su misura, riparazioni camper e installazioni
+          personalizzate. L'eccellenza artigiana per la tua casa su ruote.
         </p>
       </div>
 
