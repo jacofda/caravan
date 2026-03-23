@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import type { CaravanContent } from '../+page';
 
@@ -30,11 +31,15 @@ interface CaravanDetailStory {
 export const load: PageLoad = async ({ params, parent }) => {
   const { storyblokAPI } = await parent();
 
-  const response = await storyblokAPI.get(`cdn/stories/caravan/${params.slug}`, {
-    version: 'draft',
-  });
+  try {
+    const response = await storyblokAPI.get(`cdn/stories/caravan/${params.slug}`, {
+      version: 'draft',
+    });
 
-  return {
-    caravan: response.data.story as CaravanDetailStory,
-  };
+    return {
+      caravan: response.data.story as CaravanDetailStory,
+    };
+  } catch {
+    error(404, 'Caravan non trovato');
+  }
 };

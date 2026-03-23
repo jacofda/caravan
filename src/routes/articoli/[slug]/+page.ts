@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import type { ArticoloContent } from '../+page';
 
@@ -30,20 +31,24 @@ interface ArticoloDetailStory {
 export const load: PageLoad = async ({ params, parent }) => {
   const { storyblokAPI } = await parent();
 
-  const [articleResponse, latestResponse] = await Promise.all([
-    storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, { version: 'draft' }),
-    storyblokAPI.get('cdn/stories', {
-      version: 'draft',
-      per_page: 3,
-      sort_by: 'published_at:desc',
-      filter_query: {
-        component: { in: 'Articolo' },
-      },
-    }),
-  ]);
+  try {
+    const [articleResponse, latestResponse] = await Promise.all([
+      storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, { version: 'draft' }),
+      storyblokAPI.get('cdn/stories', {
+        version: 'draft',
+        per_page: 3,
+        sort_by: 'published_at:desc',
+        filter_query: {
+          component: { in: 'Articolo' },
+        },
+      }),
+    ]);
 
-  return {
-    articolo: articleResponse.data.story as ArticoloDetailStory,
-    latestArticoli: latestResponse.data.stories,
-  };
+    return {
+      articolo: articleResponse.data.story as ArticoloDetailStory,
+      latestArticoli: latestResponse.data.stories,
+    };
+  } catch {
+    error(404, 'Articolo non trovato');
+  }
 };
