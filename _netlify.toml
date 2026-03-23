@@ -1,0 +1,17 @@
+# [build]
+# command = "npm run build"
+# publish = ".netlify/static"
+
+# [functions]
+# directory = ".netlify/functions-internal"
+# node_bundler = "esbuild"
+
+# [[headers]]
+# for = "/*.html"
+# [headers.values]
+# Cache-Control = "public, max-age=0, must-revalidate"
+
+# [[headers]]
+# for = "/"
+#   [headers.values]
+#     Cache-Control = "public, max-age=0, must-revalidate"

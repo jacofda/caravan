@@ -30,11 +30,20 @@ interface ArticoloDetailStory {
 export const load: PageLoad = async ({ params, parent }) => {
   const { storyblokAPI } = await parent();
 
-  const response = await storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, {
-    version: 'draft',
-  });
+  const [articleResponse, latestResponse] = await Promise.all([
+    storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, { version: 'draft' }),
+    storyblokAPI.get('cdn/stories', {
+      version: 'draft',
+      per_page: 3,
+      sort_by: 'published_at:desc',
+      filter_query: {
+        component: { in: 'Articolo' },
+      },
+    }),
+  ]);
 
   return {
-    articolo: response.data.story as ArticoloDetailStory,
+    articolo: articleResponse.data.story as ArticoloDetailStory,
+    latestArticoli: latestResponse.data.stories,
   };
 };
