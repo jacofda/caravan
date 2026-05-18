@@ -3,8 +3,6 @@
   import CamperHome from '$lib/components/elements/CamperHome.svelte';
   import ArticoliList from '../lib/components/ArticoliList.svelte';
   export let data;
-
-  console.log('Data ricevuta in +page.svelte:', data);
 </script>
 
 <!-- Hero Section -->
