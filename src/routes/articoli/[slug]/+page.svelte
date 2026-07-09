@@ -17,33 +17,10 @@
   const fallback = ' | Scopri dettagli, immagini e informazioni complete sul nostro sito Caravan.';
   const seoDescription = base.length >= MIN_DESC ? base : (base + fallback).slice(0, 160);
 
-  const categories = [
-    {
-      label: 'Tutte',
-      href: '/articoli',
-      color: 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-white',
-    },
-    {
-      label: 'Articolo',
-      href: '/articoli?activeFilter=Articolo',
-      color: 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-white',
-    },
-    {
-      label: 'Accessori',
-      href: '/articoli?activeFilter=Accessori',
-      color: 'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-white',
-    },
-    {
-      label: 'Mezzi Speciali',
-      href: '/articoli?activeFilter=Mezzi%20Speciali',
-      color: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-    },
-    {
-      label: 'In Vendita',
-      href: '/articoli?activeFilter=In%20Vendita',
-      color: 'border-2 border-quaternary text-quaternary hover:bg-quaternary hover:text-white',
-    },
-  ];
+  // Altri articoli da mostrare nella sidebar (esclude quello corrente).
+  $: altriArticoli = (data.latestArticoli ?? []).filter(
+    (story: any) => story.slug !== data.articolo.slug
+  );
 </script>
 
 <svelte:head>
@@ -92,7 +69,11 @@
 
 <div class="container mx-auto px-4 pt-8 pb-16 lg:pt-16">
   <div class="grid grid-cols-12 lg:gap-8">
-    <main class="col-span-12 min-w-0 overflow-hidden lg:col-span-9">
+    <main
+      class={`col-span-12 min-w-0 overflow-hidden ${
+        altriArticoli.length > 0 ? 'lg:col-span-9' : 'mx-auto lg:col-span-10 lg:col-start-2'
+      }`}
+    >
       {#if data.articolo.content.sottotitolo}
         <h2 class="mb-8 text-2xl font-semibold text-gray-600">
           {data.articolo.content.sottotitolo}
@@ -140,15 +121,16 @@
       </div>
     </main>
 
-    <aside
-      class="col-span-12 flex flex-col gap-6 lg:sticky lg:top-12 lg:col-span-3 lg:self-start lg:pt-16"
-    >
-      <div class="overflow-hidden rounded-xl bg-white shadow-lg">
-        <div class="bg-secondary px-5 py-3">
-          <h3 class="text-lg font-bold text-white">Ultimi Articoli</h3>
-        </div>
-        <div class="divide-y divide-gray-100 p-4">
-          {#each data.latestArticoli as story}
+    {#if altriArticoli.length > 0}
+      <aside
+        class="col-span-12 flex flex-col gap-6 lg:sticky lg:top-12 lg:col-span-3 lg:self-start lg:pt-16"
+      >
+        <div class="overflow-hidden rounded-xl bg-white shadow-lg">
+          <div class="bg-secondary px-5 py-3">
+            <h3 class="text-lg font-bold text-white">Ultimi Articoli</h3>
+          </div>
+          <div class="divide-y divide-gray-100 p-4">
+            {#each altriArticoli as story}
             <a href="/articoli/{story.slug}" class="group flex gap-3 py-3">
               {#if story.content.immagine?.filename}
                 <img
@@ -174,26 +156,11 @@
                 {/if}
               </div>
             </a>
-          {/each}
+            {/each}
+          </div>
         </div>
-      </div>
-
-      <div class="overflow-hidden rounded-xl bg-white shadow-lg">
-        <div class="bg-secondary px-5 py-3">
-          <h3 class="text-lg font-bold text-white">Categorie</h3>
-        </div>
-        <div class="flex flex-wrap gap-2 p-4">
-          {#each categories as cat}
-            <a
-              href={cat.href}
-              class={`w-fit rounded-xl px-4 py-2 text-center text-xs font-semibold transition-all duration-200 hover:scale-105 hover:shadow-md ${cat.color}`}
-            >
-              {cat.label}
-            </a>
-          {/each}
-        </div>
-      </div>
-    </aside>
+      </aside>
+    {/if}
   </div>
 </div>
 <ContactCTA />

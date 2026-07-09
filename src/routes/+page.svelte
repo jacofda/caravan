@@ -2,6 +2,7 @@
   import CTAHome from '$lib/components/CTAHome.svelte';
   import CamperHome from '$lib/components/elements/CamperHome.svelte';
   import ArticoliList from '../lib/components/ArticoliList.svelte';
+  import logoCircle from '$lib/assets/logo-circle.png';
   export let data;
 </script>
 
@@ -41,11 +42,18 @@
   </div>
 
   <div class="mx-auto max-w-7xl px-6 pt-20 pb-24 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
-      <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-        <span class="text-secondary">Caravan Personalizzati</span>
-        <br />su Misura
-      </h1>
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="flex flex-col items-center justify-center gap-6 sm:flex-col sm:gap-8">
+        <img
+          src={logoCircle}
+          alt="Officine Meccaniche Giacomella"
+          class="h-20 w-auto shrink-0 drop-shadow-xl sm:h-22"
+        />
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+          <span class="text-secondary">Caravan Personalizzati</span>
+          <br />su Misura
+        </h1>
+      </div>
       <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-xl">
         Costruzione artigianale di caravan su misura con <span class="text-primary font-semibold"
           >portata fino a 1500kg</span

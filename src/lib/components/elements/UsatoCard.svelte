@@ -2,12 +2,10 @@
   import { sbImg } from '$lib/storyblok';
 
   export let story: any;
-  export let showtag: boolean = true;
-  export let tagColor: string = 'bg-primary text-white';
 </script>
 
 <a
-  href="/articoli/{story.slug}"
+  href="/usato/{story.slug}"
   class="group overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
 >
   <!-- Image -->
@@ -19,17 +17,22 @@
         class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
       />
     {/if}
-    {#if showtag && story.content.tag && story.content.tag !== 'Articolo'}
+    {#if story.content.anno}
       <div
-        class={`absolute top-4 right-4 rounded-xl px-4 py-2 text-sm font-semibold shadow-lg ${tagColor}`}
+        class="bg-secondary absolute top-4 right-4 rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-lg"
       >
-        {story.content.tag}
+        {story.content.anno}
       </div>
     {/if}
   </div>
 
   <!-- Content -->
   <div class="p-6">
+    {#if story.content.marca}
+      <p class="text-secondary mb-1 text-sm font-semibold tracking-wide uppercase">
+        {story.content.marca}
+      </p>
+    {/if}
     <h3 class="group-hover:text-secondary mb-2 text-xl font-bold text-gray-900 transition-colors">
       {story.content.titolo}
     </h3>

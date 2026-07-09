@@ -1,14 +1,16 @@
 import type { PageLoad } from './$types';
 
-export interface ArticoloContent {
-  tag: string;
+export interface UsatoContent {
   _uid: string;
   titolo: string;
   sottotitolo: string;
+  marca: string;
+  anno: string | number;
   galleria: Immagine[];
   immagine: Immagine;
   component: string;
   descrizione: any;
+  attivo: boolean;
   _editable?: string;
 }
 
@@ -29,25 +31,25 @@ export interface Immagine {
 export const load: PageLoad = async ({ parent }) => {
   const { storyblokAPI } = await parent();
 
-  interface ArticoloStory {
+  interface UsatoStory {
     name: string;
     slug: string;
-    content: ArticoloContent;
+    published_at: string | null;
+    content: UsatoContent;
   }
 
   const response = await storyblokAPI.get('cdn/stories', {
     version: 'draft',
-    per_page: 40,
+    per_page: 100,
     filter_query: {
       component: {
-        in: 'Articolo',
+        in: 'Usato',
       },
     },
   });
 
-  const stories = (response.data.stories as ArticoloStory[]).filter(
-    (s) => s.content.tag === 'Articolo' || s.content.tag === 'Mezzi Speciali'
-  );
+  // In vetrina solo gli annunci attivi (non venduti).
+  const stories = (response.data.stories as UsatoStory[]).filter((s) => s.content.attivo);
 
   return {
     stories,

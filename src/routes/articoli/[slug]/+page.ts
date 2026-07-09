@@ -40,6 +40,7 @@ export const load: PageLoad = async ({ params, parent }) => {
         sort_by: 'published_at:desc',
         filter_query: {
           component: { in: 'Articolo' },
+          tag: { in: 'Articolo,Mezzi Speciali' },
         },
       }),
     ]);
