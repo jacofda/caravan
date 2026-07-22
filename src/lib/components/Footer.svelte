@@ -101,9 +101,14 @@
           <img src={logoRimorchi} alt="OMG Rimorchi" class="h-10" />
         </a>
 
-        <div>
+        <div class="flex flex-col gap-2">
           <a
-            href="https://www.iubenda.com/privacy-policy/68178934/cookie-policy"
+            href="https://www.iubenda.com/privacy-policy/77909284"
+            class="iubenda-nostyle text-sm text-gray-400 underline-offset-4 transition-colors hover:text-white hover:underline"
+            title="Privacy Policy ">Privacy Policy</a
+          >
+          <a
+            href="https://www.iubenda.com/privacy-policy/77909284/cookie-policy"
             class="iubenda-nostyle text-sm text-gray-400 underline-offset-4 transition-colors hover:text-white hover:underline"
             title="Cookie Policy ">Cookie Policy</a
           ><script type="text/javascript">
